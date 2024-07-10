@@ -1,39 +1,21 @@
 import { extendTheme } from "@chakra-ui/react";
 import { colors } from "./colors";
+import { semanticTokens } from "./semanticTokens";
+import { textStyles } from "./textStyles";
+import "@fontsource-variable/inter";
+import { fontWeights, fonts } from "./fonts";
 
 export const theme = extendTheme({
   colors,
-  semanticTokens: {
-    background: {
-      default: "white",
-      _dark: "black",
-    },
-    foreground: {
-      default: "black",
-      _dark: "white",
-    },
-    muted: {
-      default: "slate.100",
-      _dark: "slate.800",
-    },
-    ["muted-foreground"]: {
-      default: "slate.500",
-      _dark: "slate.400",
-    },
-    card: {
-      default: "white",
-      _dark: "black",
-    },
-    ["card-foreground"]: {
-      default: "black",
-      _dark: "white",
-    },
-    popover: {
-      default: "white",
-      _dark: "black",
-    },
-  },
+  semanticTokens,
+  fonts,
+  fontWeights,
+  textStyles,
   styles: {
-    global: {},
+    global: {
+      body: {
+        ...textStyles.p,
+      },
+    },
   },
 });
