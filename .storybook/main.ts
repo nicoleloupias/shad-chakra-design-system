@@ -18,5 +18,10 @@ const config: StorybookConfig = {
     // @ts-ignore
     emotionAlias: false,
   },
+  refs: {
+    "@chakra-ui/react": {
+      disable: true,
+    },
+  },
 };
 export default config;
